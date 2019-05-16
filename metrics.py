@@ -2,7 +2,7 @@
 import psutil, sys
 
 def getCpuMetrics():
-    print("[ CPU metrics ]")
+    print("[ Cpu metrics ]")
     infoP = psutil.cpu_times_percent(interval = 1, percpu = False)
     print("System cpu   idle: [%s]" % infoP[3])
     print("System cpu   user: [%s]" % infoP[0])
@@ -25,7 +25,7 @@ def getMemMetrics():
     print("Swap  	  free: [%d]" % infoP[2])
 
 def getUsage():
-    print("Usage: metrics [ cpu | mem ] \n No args \t Display help. \n cpu \t\t Display CPU metrics information. \n mem \t\t Display MEMORY metrics information.")
+    print("Usage:\n$./metrics.py [ cpu | mem ] \n \t cpu - display CPU information. \n \t mem - display memory information. \n \t no args - display help.")
 
 def printBorder():
     print("/--------------------------------------------------------/")
@@ -44,4 +44,3 @@ else:
     printBorder()
     getUsage()
     printBorder()
-    
